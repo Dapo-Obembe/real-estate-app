@@ -10,7 +10,9 @@ import {
 
 const PropertyCard = ({ property }) => {
   const getRateDisplay = () => {
+
     const { rates } = property;
+
     if (rates.monthly) {
       return `$${rates.monthly.toLocaleString()}/mo`;
     } else if (rates.weekly) {
@@ -18,12 +20,13 @@ const PropertyCard = ({ property }) => {
     } else if (rates.nightly) {
       return `$${rates.nightly.toLocaleString()}/night`;
     }
+
   };
 
   return (
     <div className='rounded-xl shadow-md relative'>
       <Image
-        src={`/images/properties/${property.images[0]}`}
+        src={property.images[0]}
         alt=''
         width='0'
         height='0'

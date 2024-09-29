@@ -1,7 +1,11 @@
-import properties from '@/properties.json';
 import PropertyCard from './PropertyCard';
+import connectDB from '@/config/database';
+import Property from '@/models/Property';
 
-const PropertyCardInner = () => {
+const PropertyCardInner = async () => {
+    await connectDB();
+    const properties = await Property.find({}).lean();
+    
     return ( 
         <>
         {/* Check if there are properties listed  */}
