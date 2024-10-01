@@ -21,9 +21,8 @@ async function bookmarkProperty(propertyId) {
     const user = await User.findById(userId);
 
     //------ Check if the property to be bookmarked is already in the array.
-    // Add to be Bookmark array if not, and remove if already in the array -------//
-
-    const isBookmarked = user.bookmarks.includes(propertyId);
+    // Add to the Bookmark array if not, and remove if already in the array -------//
+    let isBookmarked = user.bookmarks.includes(propertyId);
     let message;
 
     if (isBookmarked) {
