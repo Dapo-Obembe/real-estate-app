@@ -10,7 +10,7 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 const SearchResultsPage = async ({ searchParams: { location, propertyType } }) => {
     await connectDB();
 
-    // Fetch the property that matches the values from the form.
+    // Create Patterns that match the Search Form Fields and perform the query..
 
     const locationPattern = new RegExp(location, 'i');
 
