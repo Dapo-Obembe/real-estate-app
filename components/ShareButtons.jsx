@@ -1,6 +1,15 @@
 'use client';
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, EmailShareButton, FacebookIcon, TwitterIcon, WhatsappIcon, EmailIcon } from 'react-share';
 
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    WhatsappShareButton,
+    EmailShareButton,
+    FacebookIcon,
+    TwitterIcon,
+    WhatsappIcon,
+    EmailIcon
+} from 'react-share';
 
 const ShareButtons = ({ property }) => {
     // URL that will be shared.
