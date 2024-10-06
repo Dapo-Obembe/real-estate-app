@@ -43,4 +43,4 @@ const MessageSchema = new Schema(
 
 const Message = models.Message || model('Message', MessageSchema);
 
-export default User;
+export default Message;
